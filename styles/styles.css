@@ -1,0 +1,220 @@
+html, body {
+  font-family: 'Work Sans', sans-serif;
+  color: #666;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: #fff9f4;
+}
+
+header {
+  overflow-x: hidden;
+  position: fixed;
+  box-shadow: 0 1px 12px -3px rgba(0,0,0,0.3);
+  border-bottom: 1px #ddd;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  height: 60px;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+
+.mainheader{
+  margin: 0 -500%;
+  padding: 0.5em 500%;
+  float: left;
+  background-color: #fff9f4;
+}
+
+header h1{
+  font-size: 15px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.logomark {
+  /*background-image: url(../images/Logomark.png);*/
+  width: 15px;
+  padding: 5px;
+  display: inline;
+  margin: 0px 5px;
+}
+
+.donatebutton {
+  color: white;
+  cursor: pointer;
+  float: right;
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+  background-color: #ff9933;
+  margin: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**** MAIN NAVIGATION ****/
+
+/*.nav {
+  display: inline-block;
+}*/
+
+.mainheader ul{
+  list-style: none;
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 20px;
+  /*padding: 20px 10% 0px 0%;*/
+}
+
+.nav li{
+  display: inline;
+  padding-right: 12px;
+}
+
+.nav a {
+  color: #666;
+  text-decoration: none;
+  font-size: 11px;
+  text-transform: uppercase;
+}
+
+/*a:visited { text-decoration: none; color:red; }
+a:hover { text-decoration: none; color:blue; }
+a:focus { text-decoration: none; color:yellow; }
+a:hover, a:active { text-decoration: none; color:black }*/
+
+.nav a:hover{text-decoration: none; color: #ff9933;}
+.nav a:visited{text-decoration: none; color: #666;}
+.nav a:hover{text-decoration: none; color: #ff9933;}
+.nav a:active{text-decoration: none; color: #ff9933;}
+
+/**** END MAIN NAVIGATION ****/
+
+
+
+/**** TITLE BANNER ****/
+
+.titlebanner {
+  background-image: url(../images/gun-on-table.jpg);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 100% 100%; 
+  height: 100vh;
+  /*width: 100vh;*/
+  z-index: 2;
+  /* Make a concession for the fixed position header above */
+  padding-top: 60px;
+}
+
+.titlebanner h1 {
+  font-size: 110px;
+  padding: 60px 0px 0px 35px;
+  font-weight: 600;
+  margin: 0;
+  letter-spacing: -0.04em;
+}
+
+.titlebanner h2 {
+  padding: 0px 0px 0px 35px;
+  font-size: 22px;
+  font-weight: 300;
+}
+
+/**** END TITLE BANNER ****/
+
+
+
+/**** STICKY NAV ****/
+
+.sticky_interchapternav {
+  border: solid 1px #93eaed;
+}
+
+/**** END STICKY NAV ****/
+
+
+/**** REPORT BODY ****/
+
+.reportcontainer {
+  padding: 40px 100px 40px 250px;
+}
+
+.reportcontainer p{
+  /*font-family: Georgia, serif;*/
+  line-height: 1.6em;
+  letter-spacing: -0.06em;
+  font-size: 18px;
+  padding-right: 380px;
+}
+
+.introtext {
+  color: #666;
+  font-size: 35px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  /*padding: 0px 450px 0px 0px;*/
+}
+
+/**** REPORT BODY ****/
+
+/**** BLOCK QUOTE ****/
+
+blockquote {
+  padding: 50px;
+  float: right;
+  margin: 10px 10px;
+  position: relative;
+  display: block;
+  font-size: 60px;
+  text-align: right;
+}
+
+/**** END BLOCK QUOTE ****/
+
+/**** BOTTOM PAGE CHAPTER NAVIGATION****/
+.bottompage_chapternav{
+  border: 2px solid #666;
+  display: inline-block;
+  margin: auto;
+  padding: 10px;
+  cursor: pointer;
+  outline: 0;
+  padding: 8px 25.5px;
+  background-color: transparent;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 12.299px;
+  transition: all .3s ease-in-out;
+}
+
+
+
+/**** BOTTOM PAGE CHAPTER NAVIGATION****/
+
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 660px) {
+  .reportcopy {
+    padding: 40px 100px 40px 250px;
+  }
+}
+
+
+/*** END MEDIA QUERIES ***/
+
+
+.halfpagegraphic {
+  border: solid 1px blue;
+}
+
+footer {
+  border: solid 2px blue;
+}
+
