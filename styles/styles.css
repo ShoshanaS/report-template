@@ -5,33 +5,83 @@ html, body {
   padding: 0;
   height: 100%;
   background-color: #fff9f4;
+  word-break: keep-all;
 }
+
+h2, h3, h4, h5, h6, .reportcontainer h1, h2 {
+  padding-top: 2em;
+  padding-bottom: 0px;
+  margin-left: -20px;
+}
+
+h2 {
+  font-size: 1.6em;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  /*text-transform: uppercase;*/
+}
+
+h3 {
+  font-size: 1.4em;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h4 {
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  margin-left: inherit;
+}
+
+h6 {
+  font-weight: 200;
+  letter-spacing: -0.01em;
+  margin-left: inherit;
+}
+
+.image-container {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 2;
+  color: #fff9f4;
+  /*content: attr(experiment)*/
+}
+
+/**** END BODY STYLES ****/
 
 header {
-  overflow-x: hidden;
   position: fixed;
   box-shadow: 0 1px 12px -3px rgba(0,0,0,0.3);
-  border-bottom: 1px #ddd;
-  width: 100%;
-  z-index: 1;
-  background-color: white;
-  height: 60px;
-}
-
-.wrapper {
-  margin: 0 auto;
-  padding-bottom: 2em;
-}
-
-.mainheader{
-  margin: 0 -500%;
-  padding: 0.5em 500%;
-  float: left;
   background-color: #fff9f4;
+  border-bottom: 1px #ddd;
+  padding: 0 35px;
+  width: 100%;
+  z-index: 100;
 }
 
-header h1{
-  font-size: 15px;
+.mainheader {
+  background-color: #fff9f4;
+  padding: 0 35px;
+  z-index: 100;
+}
+
+button {
+  cursor: pointer;
+  outline: 0;
+  text-decoration: none;
+}
+
+header h1, footer h1{
+  font-size: 1em;
   display: inline-block;
   text-transform: uppercase;
 }
@@ -44,56 +94,71 @@ header h1{
   margin: 0px 5px;
 }
 
-.donatebutton {
-  color: white;
-  cursor: pointer;
-  float: right;
-  display: inline-block;
-  text-transform: uppercase;
-  border: none;
-  background-color: #ff9933;
-  margin: 15px;
-}
-
-a {
-  text-decoration: none;
-}
 
 /**** MAIN NAVIGATION ****/
-
-/*.nav {
-  display: inline-block;
-}*/
 
 .mainheader ul{
   list-style: none;
   display: inline-block;
   cursor: pointer;
   padding-left: 20px;
-  /*padding: 20px 10% 0px 0%;*/
+  /*justify-content: space-between;*/
+  flex-wrap: wrap;
 }
 
-.nav li{
+.nav li {
   display: inline;
   padding-right: 12px;
 }
 
-.nav a {
+.mainheader a {
   color: #666;
   text-decoration: none;
   font-size: 11px;
   text-transform: uppercase;
 }
 
-/*a:visited { text-decoration: none; color:red; }
-a:hover { text-decoration: none; color:blue; }
-a:focus { text-decoration: none; color:yellow; }
-a:hover, a:active { text-decoration: none; color:black }*/
+#menu-toggler {
+  display: none;
+}
 
-.nav a:hover{text-decoration: none; color: #ff9933;}
-.nav a:visited{text-decoration: none; color: #666;}
-.nav a:hover{text-decoration: none; color: #ff9933;}
-.nav a:active{text-decoration: none; color: #ff9933;}
+/*
+When defining pseudo-behaviors for link the rulesets need to come in this order ("love hate")
+  a:link - a basic link
+  a:visited - a previously visited page
+  a:hover - a mouse over the link
+  a:active - a currently clicked link
+*/
+
+.mainheader a:hover {
+  color: #ff9933;
+  /*text-decoration: underline;*/
+  transition: color .2s linear;
+}
+
+.mainheader a:active {
+  color: #ff9933;
+}
+
+.mainheader a.current-page {
+  color: #ff9933;
+  /*font-weight: 700;*/
+/*  background-color: gray;
+  padding: 5px;
+*/}
+
+.mainheader a.donate {
+  color: #fff9f4;
+  margin: 15px;
+  padding: 5px;
+  float: right;
+  background-color: #ff9933;
+}
+
+a:visited {
+  color: inherit;
+  text-decoration: none;
+}
 
 /**** END MAIN NAVIGATION ****/
 
@@ -102,43 +167,31 @@ a:hover, a:active { text-decoration: none; color:black }*/
 /**** TITLE BANNER ****/
 
 .titlebanner {
-  background-image: url(../images/gun-on-table.jpg);
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: 100% 100%; 
-  height: 100vh;
-  /*width: 100vh;*/
-  z-index: 2;
+  background-image: url("../images/gun-on-ground-gray2.jpg");
+  color: #fff9f4;
   /* Make a concession for the fixed position header above */
-  padding-top: 60px;
+  padding-top: 10em;
 }
 
-.titlebanner h1 {
-  font-size: 110px;
-  padding: 60px 0px 0px 35px;
+.titlebanner h1, .titlebanner h2, {
+  font-size: 5em;
+  padding: 60px 130px 0px 550px;
   font-weight: 600;
   margin: 0;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.03em;
+  text-transform: capitalize;
+  text-align: right;
+  color: #fff9f4;
+  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .titlebanner h2 {
-  padding: 0px 0px 0px 35px;
-  font-size: 22px;
+  font-size: 1.5em;
   font-weight: 300;
+  text-transform: none;
 }
 
 /**** END TITLE BANNER ****/
-
-
-
-/**** STICKY NAV ****/
-
-.sticky_interchapternav {
-  border: solid 1px #93eaed;
-}
-
-/**** END STICKY NAV ****/
-
 
 /**** REPORT BODY ****/
 
@@ -146,25 +199,31 @@ a:hover, a:active { text-decoration: none; color:black }*/
   padding: 40px 100px 40px 250px;
 }
 
+.reportcontainer h1 {
+  font-size: 2.5em;
+  text-transform: lowercase;
+  text-transform: capitalize;
+}
+
 .reportcontainer p{
-  /*font-family: Georgia, serif;*/
+  font-family: Georgia, serif;
   line-height: 1.6em;
-  letter-spacing: -0.06em;
-  font-size: 18px;
+  letter-spacing: -0.01em;
+  font-size: 1.2em;
   padding-right: 380px;
 }
 
+/*.reportcontainer h1 {
+
+}*/
+
 .introtext {
+  font-family: 
   color: #666;
   font-size: 35px;
   font-weight: 600;
   letter-spacing: -0.01em;
-  /*padding: 0px 450px 0px 0px;*/
 }
-
-/**** REPORT BODY ****/
-
-/**** BLOCK QUOTE ****/
 
 blockquote {
   padding: 50px;
@@ -172,49 +231,264 @@ blockquote {
   margin: 10px 10px;
   position: relative;
   display: block;
-  font-size: 60px;
+  font-size: 3.5em;
+  letter-spacing: -0.045em;
   text-align: right;
+  z-index: 1;
+  color: #ff9933;
 }
 
-/**** END BLOCK QUOTE ****/
+.inner-image blockquote {
+  font-size: 1.5em;
+  color: #fff9f4;
 
-/**** BOTTOM PAGE CHAPTER NAVIGATION****/
-.bottompage_chapternav{
-  border: 2px solid #666;
-  display: inline-block;
-  margin: auto;
-  padding: 10px;
-  cursor: pointer;
-  outline: 0;
-  padding: 8px 25.5px;
-  background-color: transparent;
-  font-weight: 400;
+}
+
+/**** END REPORT BODY ****/
+
+
+
+/**** GRAPHICS ****/
+
+.graphic-container {
+  font-size: 1em;
+  letter-spacing: -0.045em;
+  z-index: 1;
+  padding: 50px;
+  margin: 40px 40px;
+  /*position: relative;
+  display: block;*/
   text-transform: uppercase;
-  font-size: 12.299px;
-  transition: all .3s ease-in-out;
+  font-size: 0.8em;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
+.bar-chart {
+  display: table;
+  table-layout: fixed;
+  width: 90%;
+  max-width: 600px;
+  height: 200px;
+  margin: 0 auto;
+  /*background-image: linear-gradient(red);
+  background-size: 100% 50px;
+  background-position: left top;*/
+}
+.bar-chart li {
+  position: relative;
+  display: table-cell;
+  vertical-align: bottom;
+  height: 200px;
+}
+.bar-chart span {
+  margin: 0 1em;
+  display: block;
+  background: #666;
+  animation: draw 1.3s ease-in-out;
+}
 
+.bar-chart span:before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  padding: 5px 1em 0;
+  display: block;
+  content: attr(title);
+}
 
-/**** BOTTOM PAGE CHAPTER NAVIGATION****/
-
-
-/*** MEDIA QUERIES ***/
-@media screen and (max-width: 660px) {
-  .reportcopy {
-    padding: 40px 100px 40px 250px;
+@keyframes draw {
+  0% {
+    height: 0;
   }
 }
 
 
+/**** END GRAPHICS ****/
+
+
+
+
+/**** BOTTOM PAGE CHAPTER NAVIGATION****/
+.chapternav-container {
+  margin: 2em;
+}
+
+.bottompage_chapternav{
+  border: none;
+  display: block;
+  margin: auto;
+  padding: 8px;
+  background-color: #ff9933;
+  color: #fff9f4;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+
+.bottompage_chapternav a:hover {
+  background-color: #ffefe2;
+  transition: background-color .2s linear;
+}
+
+.bottompage_chapternav a:active {
+  color: #ff9933;
+  text-decoration: none;
+}
+
+
+
+/**** END BOTTOM PAGE CHAPTER NAVIGATION****/
+
+
+
+
+/**** FOOTER ****/
+
+footer {
+  padding: 3em;
+  background-color: #666;
+  height: 200px;
+  color: #bcbcbc;
+  font-size: 0.8em;
+}
+
+.footer-url{
+  font-family: "Gotham A","Gotham B", inherit;
+  font-size: 1.1em;
+  font-weight: 200;
+}
+
+.footer-emphasis {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+footer p{
+  /*display: inline;*/
+  display: inline-flex;
+  margin-right: 5px;
+}
+
+.footer a:hover {
+  color: #ff9933;
+  /*text-decoration: underline;*/
+  /*transition: color .2s linear;*/
+}
+
+.footer a:active {
+  color: #ff9933;
+}
+
+
+
+
+/**** END FOOTER ****/
+
+/*** MEDIA QUERIES ***/
+@media screen and (max-width: 1100px) {
+  body{
+    background-color: #ffecdd;
+  }
+  .titlebanner h1, .titlebanner h2 {
+    padding: 60px 50px 0px 30px;
+  }
+  .reportcontainer {
+    padding: 40px 100px 80px 40px;
+  }
+  .reportcontainer p{
+    padding-right: 160px;
+  }
+  blockquote {
+    padding-bottom: 65px;
+  }
+  .graphic-container{
+    width: 50%
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .body {
+    background-color: #f2d3ba;
+  }
+  .mainheader h1 {
+    display: none;
+  }
+  .nav li{
+    display: none;
+  }
+  #menu-toggler {
+    display: inline;
+  }
+  * {
+    margin-right: 3px;
+    margin-left: 3px;
+  }
+  .titlebanner {
+    margin: 0px;
+  }
+  .reportcontainer p{
+    padding: 16px;
+  }
+  blockquote {
+    padding: 0px;
+  }
+  .graphic-container{
+    width: 100%
+    margin: 0px;
+    padding: 3px;
+  }
+  .bar-chart span {
+    margin: 0 0.3em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  h2, h3, h4, h5, h6, .reportcontainer h1 {
+    padding-top: 1.4em;
+    padding-bottom: 3px;
+    margin-left: 3px;
+  }
+  .titlebanner h1, .titlebanner h2 {
+    padding: 60px 8px 0px 3px;
+    text-align: left;
+    /*font-size: 8vh;*/
+  }
+  .titlebanner h1 {
+    font-size: 3em;
+  }
+
+  .reportcontainer {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px;
+  }
+  .reportcontainer p{
+    font-size: 1.1em;
+    padding: 3px;
+  }
+  blockquote {
+    font-size: 2em;
+    text-align: right;
+    font-weight: 400;
+    padding-right: 10px;
+    padding-bottom: 30px;
+    padding-left: 0px;
+  }
+}
+
 /*** END MEDIA QUERIES ***/
 
 
-.halfpagegraphic {
-  border: solid 1px blue;
-}
 
-footer {
-  border: solid 2px blue;
-}
+
+
 
