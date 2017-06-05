@@ -56,3 +56,8 @@
   transform: translateZ(-600px) scale(3);
   z-index: 2;
 }
+
+#group1 {
+  /* slide over group 2 */
+  z-index: 5; 
+}

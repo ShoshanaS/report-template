@@ -8,7 +8,7 @@ html, body {
   word-break: keep-all;
 }
 
-h2, h3, h4, h5, h6, .reportcontainer h1, h2 {
+h3, h4, h5, h6, .reportcontainer h1, .reportcontainer h2 {
   padding-top: 2em;
   padding-bottom: 0px;
   margin-left: -20px;
@@ -52,7 +52,6 @@ h6 {
   background-attachment: fixed;
   height: 100vh;
   z-index: 2;
-  color: #fff9f4;
   /*content: attr(experiment)*/
 }
 
@@ -171,24 +170,21 @@ a:visited {
   color: #fff9f4;
   /* Make a concession for the fixed position header above */
   padding-top: 10em;
-}
-
-.titlebanner h1, .titlebanner h2, {
-  font-size: 5em;
+  font-size: 40px;
   padding: 60px 130px 0px 550px;
   font-weight: 600;
   margin: 0;
   letter-spacing: -0.03em;
   text-transform: capitalize;
   text-align: right;
-  color: #fff9f4;
   text-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.titlebanner h2 {
-  font-size: 1.5em;
+.titlebanner-subhead {
+  font-size: 18px;
   font-weight: 300;
   text-transform: none;
+  padding-top: 0px;
 }
 
 /**** END TITLE BANNER ****/
@@ -200,28 +196,24 @@ a:visited {
 }
 
 .reportcontainer h1 {
-  font-size: 2.5em;
+  font-size: 2em;
   text-transform: lowercase;
   text-transform: capitalize;
 }
 
 .reportcontainer p{
   font-family: Georgia, serif;
-  line-height: 1.6em;
+  line-height: 1.5em;
   letter-spacing: -0.01em;
   font-size: 1.2em;
   padding-right: 380px;
+  margin-bottom: 10px;
 }
 
-/*.reportcontainer h1 {
-
-}*/
-
 .introtext {
-  font-family: 
   color: #666;
   font-size: 35px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: -0.01em;
 }
 
@@ -241,7 +233,18 @@ blockquote {
 .inner-image blockquote {
   font-size: 1.5em;
   color: #fff9f4;
+}
 
+.reportcontainer ul { 
+  margin: 0px 60px; 
+  padding: 30px; 
+  line-height: 1.5em;
+}
+
+.reportcontainer li {
+  margin-bottom: 10px;
+ /* margin-right: 50px;*/
+ max-width: 87%;
 }
 
 /**** END REPORT BODY ****/
@@ -358,7 +361,7 @@ footer {
 }
 
 .footer-url{
-  font-family: "Gotham A","Gotham B", inherit;
+  font-family: "Gotham A", "Gotham B", inherit;
   font-size: 1.1em;
   font-weight: 200;
 }
@@ -390,12 +393,14 @@ footer p{
 /**** END FOOTER ****/
 
 /*** MEDIA QUERIES ***/
-@media screen and (max-width: 1100px) {
-  body{
-    background-color: #ffecdd;
+@media screen and (max-width: 1150px) {
+  .titlebanner, .titlebanner-subhead {
+    margin: 0px;
+    padding: 60px 40px 0px 50px;
+    text-align: left;
   }
-  .titlebanner h1, .titlebanner h2 {
-    padding: 60px 50px 0px 30px;
+  .titlebanner-subhead {
+    padding: 0px;
   }
   .reportcontainer {
     padding: 40px 100px 80px 40px;
@@ -412,9 +417,6 @@ footer p{
 }
 
 @media screen and (max-width: 750px) {
-  .body {
-    background-color: #f2d3ba;
-  }
   .mainheader h1 {
     display: none;
   }
@@ -424,21 +426,29 @@ footer p{
   #menu-toggler {
     display: inline;
   }
-  * {
+  /** {
     margin-right: 3px;
-    margin-left: 3px;
+    margin-left: 3px;*/
   }
-  .titlebanner {
+  .titlebanner, .titlebanner-subhead {
     margin: 0px;
+    padding: 60px 40px 0px 50px;
+    text-align: left;
+    font-size: 2em;
+  }
+  .titlebanner-subhead {
+    padding: 0px;
+    font-size: 1em;
   }
   .reportcontainer p{
-    padding: 16px;
+    padding: 8px 16px;
   }
   blockquote {
-    padding: 0px;
+    padding: 30px 0px 60px 0px;
+    font-size: 2.5em;
   }
   .graphic-container{
-    width: 100%
+    width: 100%;
     margin: 0px;
     padding: 3px;
   }
@@ -448,24 +458,21 @@ footer p{
 }
 
 @media screen and (max-width: 450px) {
-  body {
-    margin-right: 0px;
-    margin-left: 0px;
-  }
-  h2, h3, h4, h5, h6, .reportcontainer h1 {
+  h2, h3, h4, h5, h6, .reportcontainer h1, .reportcontainer h2 {
     padding-top: 1.4em;
     padding-bottom: 3px;
     margin-left: 3px;
   }
-  .titlebanner h1, .titlebanner h2 {
-    padding: 60px 8px 0px 3px;
-    text-align: left;
-    /*font-size: 8vh;*/
+  .titlebanner h1, .titlebanner-subhead {
+    padding: 60px 10px 0px 10px;
+    text-align: center;
+    font-size: 1.3em;
   }
-  .titlebanner h1 {
-    font-size: 3em;
+  .titlebanner-subhead {
+    padding-top: 0px;
+    /*padding-left: 40px;*/
+    font-size: 0.7em;
   }
-
   .reportcontainer {
     margin-left: 10px;
     margin-right: 10px;
