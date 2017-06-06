@@ -6,6 +6,8 @@ html {
   box-sizing: inherit;
 }
 
+/**** GENERIC STYLES ****/
+
 html, body {
   font-family: 'Work Sans', sans-serif;
   color: #666;
@@ -55,24 +57,11 @@ h6 {
   margin-left: inherit;
 }
 
-.image-container {
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  z-index: 2;
-  /*content: attr(experiment)*/
+a {
+  text-decoration: none;
 }
-
-/**** END BODY STYLES ****/
-
-header {
-  position: fixed;
-  z-index: 1;
-  width: 100%;
-  padding: 0 20px;
-  box-shadow: 0 1px 12px -3px rgba(0,0,0,0.3);
-  background-color: #fff9f4;
-  border-bottom: 1px #ddd;
+a:hover {
+  text-decoration: underline;
 }
 
 button {
@@ -80,13 +69,27 @@ button {
   outline: 0;
 }
 
-header h1, footer h1{
-  font-size: 1em;
+/**** MAIN NAVIGATION ****/
+
+/* REVIEW: consider removing mainheader class and using only `header` */
+.mainheader {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0 1px 12px -3px rgba(0,0,0,0.3);
+  background-color: #fff9f4;
+  border-bottom: 1px #ddd;
+}
+
+.mainheader h1 {
   display: inline-block;
+  margin: 0;
+  font-size: 1em;
   text-transform: uppercase;
 }
 
-.logomark {
+.mainheader .logomark {
   /*background-image: url(../images/Logomark.png);*/
   width: 15px;
   padding: 5px;
@@ -94,12 +97,9 @@ header h1, footer h1{
   margin: 0px 5px;
 }
 
-
-/**** MAIN NAVIGATION ****/
-
-.mainheader ul{
+.mainheader ul {
   display: inline-block;
-  margin: 20px;
+  margin: 0 20px;
   padding: 0;
   list-style: none;
   cursor: pointer;
@@ -124,7 +124,6 @@ When defining pseudo-behaviors for link the rulesets need to come in this order 
 
 .mainheader a {
   color: #666;
-  text-decoration: none;
   font-size: 11px;
   text-transform: uppercase;
 }
@@ -132,6 +131,7 @@ When defining pseudo-behaviors for link the rulesets need to come in this order 
 .mainheader a:hover {
   color: #ff9933;
   transition: color .2s linear;
+  text-decoration: none;
 }
 
 .mainheader a:active {
@@ -139,19 +139,15 @@ When defining pseudo-behaviors for link the rulesets need to come in this order 
 }
 
 .mainheader a.current-page {
-  color: #ff9933;}
+  color: #ff9933;
+  }
 
 .mainheader a.donate {
   float: right;
-  margin: 20px 0;
+  margin: 0;
   padding: 5px;
   color: #fff9f4;
   background-color: #ff9933;
-}
-
-a:visited {
-  color: inherit;
-  text-decoration: none;
 }
 
 /**** END MAIN NAVIGATION ****/
@@ -241,8 +237,6 @@ a:visited {
 
 /**** END REPORT BODY ****/
 
-
-
 /**** GRAPHICS ****/
 
 .graphic-container {
@@ -301,11 +295,14 @@ a:visited {
   }
 }
 
+.image-container {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 2;
+}
 
 /**** END GRAPHICS ****/
-
-
-
 
 /**** BOTTOM PAGE CHAPTER NAVIGATION****/
 .chapternav-container {
@@ -332,17 +329,12 @@ a.bottompage_chapternav:active {
   text-decoration: none;
 }
 
-
-
 /**** END BOTTOM PAGE CHAPTER NAVIGATION****/
-
-
-
 
 /**** FOOTER ****/
 
 footer {
-  padding: 3em;
+  padding: 20px;
   font-size: 0.8em;
   background-color: #666;
   color: #bcbcbc;
@@ -354,7 +346,7 @@ footer {
   font-weight: 200;
 }
 
-.footer-emphasis {
+footer .heading {
   font-weight: 400;
   text-transform: uppercase;
 }
@@ -363,18 +355,19 @@ footer p {
   margin-right: 5px;
 }
 
-.footer a:hover {
+footer .prompts {
+  display: inline-block;
+}
+
+footer a:hover {
   color: #ff9933;
   /*text-decoration: underline;*/
   /*transition: color .2s linear;*/
 }
 
-.footer a:active {
+footer a:active {
   color: #ff9933;
 }
-
-
-
 
 /**** END FOOTER ****/
 
@@ -437,6 +430,9 @@ footer p {
   .bar-chart span {
     margin: 0 0.3em;
   }
+  footer .prompts {
+    display: block;
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -475,9 +471,3 @@ footer p {
 }
 
 /*** END MEDIA QUERIES ***/
-
-
-
-
-
-
