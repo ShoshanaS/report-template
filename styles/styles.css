@@ -203,7 +203,7 @@ a:visited {
   text-transform: capitalize;
 }
 
-.reportcontainer p{
+.reportcontainer p {
   font-family: Georgia, serif;
   line-height: 1.5em;
   letter-spacing: -0.01em;
@@ -212,23 +212,18 @@ a:visited {
   margin-bottom: 10px;
 }
 
-.introtext {
+.reportcontainer .introtext {
   color: #666;
-  font-size: 35px;
+  font-size: 1.4em;
   font-weight: 700;
-  letter-spacing: -0.01em;
 }
 
-blockquote {
-  padding: 50px;
-  float: right;
-  margin: 10px 10px;
-  position: relative;
-  display: block;
+.reportcontainer blockquote {
+  margin: 0;
+  padding: 60px;
   font-size: 3.5em;
   letter-spacing: -0.045em;
   text-align: right;
-  z-index: 1;
   color: #ff9933;
 }
 
@@ -407,7 +402,7 @@ footer p{
   .reportcontainer p{
     padding-right: 160px;
   }
-  blockquote {
+  .reportcontainer blockquote {
     padding-bottom: 65px;
   }
   .graphic-container{
@@ -438,7 +433,7 @@ footer p{
   .reportcontainer p{
     padding: 8px 16px;
   }
-  blockquote {
+  .reportcontainer blockquote {
     padding: 30px 0px 60px 0px;
     font-size: 2.5em;
   }
@@ -477,7 +472,7 @@ footer p{
     font-size: 1.1em;
     padding: 3px;
   }
-  blockquote {
+  .reportcontainer blockquote {
     font-size: 2em;
     text-align: right;
     font-weight: 400;
