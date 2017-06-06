@@ -166,18 +166,20 @@ a:visited {
 /**** TITLE BANNER ****/
 
 .titlebanner {
+  min-height: 600px;
+  /* Make a concession for the fixed position header above (~52px high) */
+  padding: 52px 130px 0px 550px;
+  font-size: 40px;
+  letter-spacing: -0.03em;
   background-image: url("../images/gun-on-ground-gray2.jpg");
   color: #fff9f4;
-  /* Make a concession for the fixed position header above */
-  padding-top: 10em;
-  font-size: 40px;
-  padding: 60px 130px 0px 550px;
-  font-weight: 600;
-  margin: 0;
-  letter-spacing: -0.03em;
   text-transform: capitalize;
   text-align: right;
-  text-shadow:2px 2px 4px rgba(0, 0, 0, 0.1);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.titlebanner h1 {
+  font-weight: 600;
 }
 
 .titlebanner-subhead {
@@ -357,8 +359,8 @@ footer {
   font-size: 0.8em;
 }
 
-.footer-url{
-  font-family: "Gotham A", "Gotham B", inherit;
+.footer-url {
+  font-family: "Gotham A", "Gotham B", sans-serif;
   font-size: 1.1em;
   font-weight: 200;
 }
@@ -422,10 +424,6 @@ footer p{
   }
   #menu-toggler {
     display: inline;
-  }
-  /** {
-    margin-right: 3px;
-    margin-left: 3px;*/
   }
   .titlebanner, .titlebanner-subhead {
     margin: 0px;
