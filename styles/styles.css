@@ -318,27 +318,24 @@ blockquote {
 /**** BOTTOM PAGE CHAPTER NAVIGATION****/
 .chapternav-container {
   margin: 2em;
+  text-align: center;
 }
 
-.bottompage_chapternav{
-  border: none;
-  display: block;
-  margin: auto;
+.bottompage_chapternav {
   padding: 8px;
   background-color: #ff9933;
   color: #fff9f4;
-  font-weight: 400;
   text-transform: uppercase;
   font-size: 0.8em;
   text-decoration: none;
 }
 
-.bottompage_chapternav a:hover {
+a.bottompage_chapternav:hover {
   background-color: #ffefe2;
   transition: background-color .2s linear;
 }
 
-.bottompage_chapternav a:active {
+a.bottompage_chapternav:active {
   color: #ff9933;
   text-decoration: none;
 }
