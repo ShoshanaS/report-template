@@ -70,9 +70,7 @@ button {
 }
 
 /**** MAIN NAVIGATION ****/
-
-/* REVIEW: consider removing mainheader class and using only `header` */
-.mainheader {
+header {
   position: fixed;
   z-index: 1;
   width: 100%;
@@ -82,14 +80,14 @@ button {
   border-bottom: 1px #ddd;
 }
 
-.mainheader h1 {
+header h1 {
   display: inline-block;
   margin: 0;
   font-size: 1em;
   text-transform: uppercase;
 }
 
-.mainheader .logomark {
+header .logomark {
   /*background-image: url(../images/Logomark.png);*/
   width: 15px;
   padding: 5px;
@@ -97,7 +95,7 @@ button {
   margin: 0px 5px;
 }
 
-.mainheader ul {
+header ul {
   display: inline-block;
   margin: 0 20px;
   padding: 0;
@@ -122,27 +120,27 @@ When defining pseudo-behaviors for link the rulesets need to come in this order 
   a:active - a currently clicked link
 */
 
-.mainheader a {
+header a {
   color: #666;
   font-size: 11px;
   text-transform: uppercase;
 }
 
-.mainheader a:hover {
+header a:hover {
   color: #ff9933;
   transition: color .2s linear;
   text-decoration: none;
 }
 
-.mainheader a:active {
+header a:active {
   color: #ff9933;
 }
 
-.mainheader a.current-page {
+header a.current-page {
   color: #ff9933;
   }
 
-.mainheader a.donate {
+header a.donate {
   float: right;
   margin: 0;
   padding: 5px;
@@ -340,7 +338,7 @@ footer {
   color: #bcbcbc;
 }
 
-.footer-url {
+footer .url {
   font-family: "Gotham A", "Gotham B", sans-serif;
   font-size: 1.1em;
   font-weight: 200;
@@ -396,7 +394,7 @@ footer a:active {
 }
 
 @media screen and (max-width: 750px) {
-  .mainheader h1 {
+  header h1 {
     display: none;
   }
   .nav li{
