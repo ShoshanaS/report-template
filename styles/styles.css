@@ -1,7 +1,13 @@
-/* apply a natural box layout model to all elements, but allowing components to change */
+/*
+  Set box-sizing to border-box for the whole site.
+
+  See: https://www.paulirish.com/2012/box-sizing-border-box-ftw/
+*/
+/* apply a natural box layout model to all elements */
 html {
   box-sizing: border-box;
 }
+/* but allowing components to change */
 *, *:before, *:after {
   box-sizing: inherit;
 }
