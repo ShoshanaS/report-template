@@ -388,14 +388,14 @@ footer a:active {
   .reportcontainer {
     padding: 40px 100px 80px 40px;
   }
-  .reportcontainer p{
+  .reportcontainer p {
     padding-right: 160px;
   }
   .reportcontainer blockquote {
     padding-bottom: 65px;
   }
-  .graphic-container{
-    width: 50%
+  .graphic-container {
+    width: 50%;
   }
 }
 
@@ -403,11 +403,18 @@ footer a:active {
   header h1 {
     display: none;
   }
-  .nav li{
+  .nav {
     display: none;
   }
   #menu-toggler {
     display: inline;
+  }
+  .menu-open .nav {
+    /* Nav styles for open menu go here */
+    display: inline-block;
+  }
+  .menu-open #menu-toggler {
+    /* Menu butotn styles for open menu go here */
   }
   .titlebanner, .titlebanner-subhead {
     margin: 0px;
@@ -419,13 +426,13 @@ footer a:active {
     padding: 0px;
     font-size: 1em;
   }
-  .reportcontainer p{
+  .reportcontainer p {
     padding: 8px 16px;
   }
   .reportcontainer blockquote {
     padding: 30px 0px 60px 0px;
     font-size: 2.5em;
-  }
+  } 
   .graphic-container{
     width: 100%;
     margin: 0px;
@@ -452,12 +459,10 @@ footer a:active {
   }
   .titlebanner-subhead {
     padding-top: 0px;
-    /*padding-left: 40px;*/
     font-size: 0.7em;
   }
   .reportcontainer {
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 0 20px;
     padding: 0px;
   }
   .reportcontainer p{
