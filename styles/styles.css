@@ -306,6 +306,13 @@ header a.donate {
   z-index: 2;
 }
 
+.parallax-image {
+  background-image: url('../images/sad.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 2;
+}
 /**** END GRAPHICS ****/
 
 /**** BOTTOM PAGE CHAPTER NAVIGATION****/
