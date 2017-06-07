@@ -86,19 +86,19 @@ header {
   border-bottom: 1px #ddd;
 }
 
-header h1 {
+header h2 {
   display: inline-block;
   margin: 0;
-  font-size: 1em;
+  font-size: 18px;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
 }
 
 header .logomark {
-  /*background-image: url(../images/Logomark.png);*/
-  width: 15px;
-  padding: 5px;
-  display: inline;
-  margin: 0px 5px;
+  max-height: 10px;
+  display: inline-block;
+  padding-right: 7px;
+  margin: 0px;
 }
 
 header ul {
@@ -111,7 +111,7 @@ header ul {
 
 .nav li {
   display: inline;
-  padding-right: 12px;
+  padding-right: 20px;
 }
 
 #menu-toggler {
@@ -184,27 +184,67 @@ header a.donate {
   padding-top: 0px;
 }
 
+.image-container {
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  z-index: 2;
+}
+
+.chapterbanner {
+  height: 50vh;
+  min-height: 500px;
+}
+
+#banner-image-1 {
+  background-image: url("../images/iz-zy-140216.jpg")
+}
+
+#banner-image-2 {
+  background-image: url("../images/raphael-bruno-156956.jpg")
+}
+
+#banner-image-3 {
+  background-image: url("../images/claire-anderson-60670.jpg")
+}
+
+#banner-image-4 {
+  background-image: url("../images/kamesh-vedula-208292.jpg")
+}
+
 /**** END TITLE BANNER ****/
 
 /**** REPORT BODY ****/
 
 .reportcontainer {
   padding: 40px 100px 40px 250px;
+/*  max-width: 1000px;*/
+/*  border: solid 1px red;*/
 }
 
-.reportcontainer h1 {
+/*.report-container-for-text {
+  max-width: 650px;
+  border: solid 1px blue;
+}*/
+
+.reportcontainer h2 {
   font-size: 2em;
   text-transform: lowercase;
   text-transform: capitalize;
 }
 
+.reportcontainer h2, .reportcontainer h3, .reportcontainer h4, .reportcontainer h5, .reportcontainer h6, .reportcontainer li {
+  padding-right: 200px;
+}
+
+
 .reportcontainer p {
+  padding-right: 340px;
+  margin-bottom: 10px;
   font-family: Georgia, serif;
   line-height: 1.5em;
   letter-spacing: -0.01em;
   font-size: 1.2em;
-  padding-right: 380px;
-  margin-bottom: 10px;
 }
 
 .reportcontainer .introtext {
@@ -216,7 +256,7 @@ header a.donate {
 .reportcontainer blockquote {
   margin: 0;
   padding: 60px;
-  font-size: 3.5em;
+  font-size: 3em;
   letter-spacing: -0.045em;
   text-align: right;
   color: #ff9933;
@@ -229,7 +269,9 @@ header a.donate {
 
 .reportcontainer ul { 
   margin: 0px 60px; 
-  padding: 30px; 
+  padding-bottom: 30px;
+  padding-top: 30px;
+  padding-right: 30px; 
   line-height: 1.5em;
 }
 
@@ -247,16 +289,16 @@ header a.donate {
   font-size: 1em;
   letter-spacing: -0.045em;
   z-index: 1;
-  padding: 50px;
-  margin: 40px 40px;
+  padding: 20px;
+  /*margin: 40px 40px;*/
   /*position: relative;
   display: block;*/
   text-transform: uppercase;
   font-size: 0.8em;
   text-align: center;
-  display: flex;
+/*  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-between;*/
 }
 
 .bar-chart {
@@ -297,13 +339,6 @@ header a.donate {
   0% {
     height: 0;
   }
-}
-
-.image-container {
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100vh;
-  z-index: 2;
 }
 
 .parallax-image {
@@ -384,6 +419,27 @@ footer a:active {
 
 /*** MEDIA QUERIES ***/
 @media screen and (max-width: 1150px) {
+  header h1 {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  #menu-toggler {
+    display: inline;
+  }
+  .menu-open .nav {
+    /* Nav styles for open menu go here */
+    display: inline-block;
+    position: fixed;
+    top: 35px;
+/*    left: -250px;
+*/    width: 50%;
+    transition: left 0.2s;
+  }
+  .menu-open #menu-toggler li {
+    display: block;
+  }
   .titlebanner, .titlebanner-subhead {
     margin: 0px;
     padding: 60px 40px 0px 50px;
@@ -407,22 +463,6 @@ footer a:active {
 }
 
 @media screen and (max-width: 750px) {
-  header h1 {
-    display: none;
-  }
-  .nav {
-    display: none;
-  }
-  #menu-toggler {
-    display: inline;
-  }
-  .menu-open .nav {
-    /* Nav styles for open menu go here */
-    display: inline-block;
-  }
-  .menu-open #menu-toggler {
-    /* Menu butotn styles for open menu go here */
-  }
   .titlebanner, .titlebanner-subhead {
     margin: 0px;
     padding: 60px 40px 0px 50px;
@@ -435,6 +475,9 @@ footer a:active {
   }
   .reportcontainer p {
     padding: 8px 16px;
+  }
+  .reportcontainer h2, .reportcontainer h3, .reportcontainer h4, .reportcontainer h5, .reportcontainer h6, .reportcontainer li {
+    padding-right: 50px;
   }
   .reportcontainer blockquote {
     padding: 30px 0px 60px 0px;
@@ -470,6 +513,9 @@ footer a:active {
   }
   .reportcontainer {
     margin: 0 20px;
+    padding: 0px;
+  }
+  .reportcontainer h2, .reportcontainer h3, .reportcontainer h4, .reportcontainer h5, .reportcontainer h6, .reportcontainer li {
     padding: 0px;
   }
   .reportcontainer p{
